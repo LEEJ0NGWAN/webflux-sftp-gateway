@@ -1,0 +1,20 @@
+logging.level.com.example: DEBUG
+
+spring:
+  profiles:
+    active: local
+  data.jpa.repositories.bootstrap-mode: deferred
+  jpa.hibernate.ddl-auto: validate
+
+api:
+  path:
+    upload: /upload
+    download: /download
+
+sftp:
+  server-username: username
+  default-path: /some/path
+  private-key-id: sample_key_id
+  upload-chmod: 666
+  config:
+    StrictHostKeyChecking: "no"

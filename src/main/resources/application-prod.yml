@@ -1,0 +1,9 @@
+spring:
+  datasource:
+    url: db_url
+    driver-class-name: driver_class
+    username: username
+    password: password
+
+sftp:
+  server-address: server_address

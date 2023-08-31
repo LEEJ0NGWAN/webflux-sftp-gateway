@@ -1,0 +1,52 @@
+{"properties": [
+  {
+    "name": "logging.level.com.example",
+    "type": "java.lang.String",
+    "description": "A description for 'logging.level.com.example'"
+  },
+  {
+    "name": "api.path.download",
+    "type": "java.lang.String",
+    "description": "A description for 'api.path.download'"
+  },
+  {
+    "name": "api.path.upload",
+    "type": "java.lang.String",
+    "description": "A description for 'api.path.upload'"
+  },
+  {
+    "name": "sftp.server-username",
+    "type": "java.lang.String",
+    "description": "A description for 'sftp.server-username'"
+  },
+  {
+    "name": "sftp.default-path",
+    "type": "java.lang.String",
+    "description": "A description for 'sftp.default-path'"
+  },
+  {
+    "name": "sftp.private-key-id",
+    "type": "java.lang.String",
+    "description": "A description for 'sftp.private-key-id'"
+  },
+  {
+    "name": "sftp.upload-chmod",
+    "type": "java.lang.String",
+    "description": "A description for 'sftp.upload-chmod'"
+  },
+  {
+    "name": "sftp.config.Strict-host-key-checking",
+    "type": "java.lang.String",
+    "description": "A description for 'sftp.config.Strict-host-key-checking'"
+  },
+  {
+    "name": "sftp.server-address",
+    "type": "java.lang.String",
+    "description": "A description for 'sftp.server-address'"
+  },
+  {
+    "name": "sftp.server-address",
+    "type": "java.lang.String",
+    "description": "A description for 'sftp.server-address'"
+  }
+]}
