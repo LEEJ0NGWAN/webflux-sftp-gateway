@@ -4,26 +4,30 @@ This is a simple webflux API implementation of sftp upload and download binary f
 
 Binary files that downloaded from/ uploaded to SFTP Server are handled as BASE64 encoded payload in WebLayer Request/Response json data.
 
+![](./sftp-gateway.png)
+
 ### Upload Request
 
 `POST` /upload
 ```json
 {
-    "name": "file name with file extension", // asdf.pdf
-    "path": "SFTP file path this file can be saved", // /home/documents/sftp/
-    "payload": "BASE64 encoded data string"
+    "name": "asdf.pdf", // filename + extension
+    "path": "/user/downloads/sftp", // SFTP file path
+    "payload": "Base64 encoded data"
 }
 ```
 `200`
 ```json
-    "result": boolean, // true or false
-    "location": "saved file's absolute path" // /home/documents/sftp/asdf.pdf
+{
+    "result": true, // boolean
+    "location": "/user/downloads/sftp/asdf.pdf"
+}
 ```
 `error`
 ```json
 {
-    "error": "error status phrase", // Bad Request
-    "message": "detail message" // Request Body is missing
+    "error": "error status phrase",
+    "message": "detail message"
 }
 ```  
 <br>
@@ -33,20 +37,22 @@ Binary files that downloaded from/ uploaded to SFTP Server are handled as BASE64
 `POST` /upload
 ```json
 {
-    "name": "file name with file extension", // asdf.pdf
-    "path": "SFTP file path this file could be placed", // /home/documents/sftp/
+    "name": "asdf.pdf", // filename + extension
+    "path": "/user/downloads/sftp", // SFTP file path
 }
 ```
 `200`
 ```json
-    "result": boolean, // true or false
-    "payload": "loaded file's BASE64 encoded data strng" // null if result is false
+{
+    "result": true, // boolean
+    "payload": "Base64 encoded data"
+}
 ```
 `error`
 ```json
 {
-    "error": "error status phrase", // Bad Request
-    "message": "detail message" // Request Body is missing
+    "error": "error status phrase",
+    "message": "detail message"
 }
 ```
 
